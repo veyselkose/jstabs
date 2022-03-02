@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #2b2b2b;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+.container {
+  width: 100%;
+  margin-right: auto;
+  padding: 0 16px;
+  margin-left: auto;
+
+  .page-title {
+    font-family: "Great Vibes", cursive;
+    font-size: 3rem;
+    text-align: center;
+    color: #ff6a23;
+    margin: 48px 0 16px 0;
+  }
+  .tabs {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 40px 0;
+    gap: 16px;
+    &-button {
+      border: none;
+      background-color: rgba($color: #fff, $alpha: 0.2);
+      color: #fff;
+      width: 100px;
+      height: 40px;
+      border-radius: 80rem;
+      transition: 300ms all;
+      &.active {
+        background-color: #1b1b1b;
+        &:hover {
+          background-color: #1b1b1b;
+        }
+      }
+      &:hover {
+        background-color: rgba($color: #fff, $alpha: 0.4);
+      }
+      &:active {
+        background-color: #1b1b1b;
+      }
+    }
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    &-item {
+      @media screen and (max-width: 992px) {
+        width: 100%;
+      }
+      @media screen and (max-width: 576px) {
+        flex-direction: column;
+        &-texts{
+          margin: 24px 0 0 0 !important;
+        }
+      }
+      display: flex;
+      width: calc(50% - 8px);
+      border-radius: 16px;
+      background-color: #1b1b1b;
+      padding: 16px;
+      color: #fff;
+      &-img {
+        height: 150px;
+        flex: 225px 0 0;
+        border-radius: 8px;
+        width: auto;
+        object-fit: cover;
+      }
+      &-texts {
+        margin-left: 16px;
+
+        width: 100%;
+        &-top {
+          border-bottom: 3px solid #2b2b2b;
+          padding-bottom: 16px;
+          display: flex;
+          align-items: center;
+          &-title {
+            color: #f8f8f8;
+          }
+          &-price {
+            margin-left: auto;
+          }
+        }
+        &-desc {
+          margin-top: 16px;
+          color: rgba($color: #fff, $alpha: 0.7);
+        }
+      }
+    }
+  }
+}
